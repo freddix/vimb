@@ -1,11 +1,11 @@
 Summary:	Vim-like browser
 Name:		vimb
-Version:	2.3
-Release:	1
+Version:	2.5
+Release:	2
 License:	GPL v3
 Group:		X11/Applications
 Source0:	https://github.com/fanglingsu/vimb/archive/%{version}.tar.gz
-# Source0-md5:	ed20aa98ad0c3003bd2019b5c59133da
+# Source0-md5:	da9748dca59e733d59a279acb4ccf255
 BuildRequires:	gtk+-webkit-devel
 BuildRequires:	libsoup-devel
 BuildRequires:	pkg-config
@@ -20,9 +20,6 @@ keyboard driven and does not detract you from your daily work.
 
 %prep
 %setup -q
-
-%{__sed} -i 's|/etc/ssl/certs/ca-certificates.crt|/etc/certs/ca-certificates.crt|' \
-    src/setting.c
 
 %build
 export CC="%{__cc}"
