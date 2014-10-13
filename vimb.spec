@@ -1,11 +1,11 @@
 Summary:	Vim-like browser
 Name:		vimb
-Version:	2.7
+Version:	2.8
 Release:	1
 License:	GPL v3
 Group:		X11/Applications
 Source0:	https://github.com/fanglingsu/vimb/archive/%{version}.tar.gz
-# Source0-md5:	0aa0fe985f8435af7a4ce0deb2a631f5
+# Source0-md5:	32cdc9caa2031e4ad4f28dc4cd3b1fbc
 BuildRequires:	gtk+-webkit-devel
 BuildRequires:	libsoup-devel
 BuildRequires:	pkg-config
