@@ -1,22 +1,23 @@
 Summary:	Vim-like browser
 Name:		vimb
 Version:	2.8
-Release:	1
+Release:	2
 License:	GPL v3
 Group:		X11/Applications
 Source0:	https://github.com/fanglingsu/vimb/archive/%{version}.tar.gz
 # Source0-md5:	32cdc9caa2031e4ad4f28dc4cd3b1fbc
-BuildRequires:	gtk+-webkit-devel
+BuildRequires:	gtk+3-webkit-devel
 BuildRequires:	libsoup-devel
 BuildRequires:	pkg-config
 Requires:	glib-networking
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Vimb is a fast and lightweight vim like web browser based on the webkit
-web browser engine and the GTK toolkit. Vimb is modal like the great
-Vim editor and also easily configurable during runtime. Vimb is mostly
-keyboard driven and does not detract you from your daily work.
+Vimb is a fast and lightweight vim like web browser based on the
+webkit web browser engine and the GTK toolkit. Vimb is modal like
+the great Vim editor and also easily configurable during runtime.
+Vimb is mostly keyboard driven and does not detract you from your
+daily work.
 
 %prep
 %setup -q
@@ -26,7 +27,7 @@ export CC="%{__cc}"
 export CFLAGS="%{rpmcflags}"
 export LDFLAGS="%{rpmldflags}"
 %{__make} clean
-%{__make}
+%{__make} GTK=3
 
 %install
 rm -rf $RPM_BUILD_ROOT
